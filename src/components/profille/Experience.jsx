@@ -91,9 +91,9 @@ const Experience = () => {
   };
 
   return (
-    <div className="h-full px-20">
+    <div className="h-full  sm:px-20   overflow-x-auto-hidden">
       <div className="bg-white">
-        <div className="w-full border-b py-5 px-24 relative ">
+        <div className="w-full border-b py-5  relative    ss:px-[5%]  ">
           <h1 className="text-[#9E6F27] font-extrabold text-xl">
             Experience
           </h1>
@@ -142,7 +142,7 @@ const Experience = () => {
                       onChange={updateDescription}
                     />
                   </div>
-                  <div className="align-baseline self-end flex flex-row gap-5">
+                  <div className="lign-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full">
                     <input
                       type="submit"
                       value="Save"
@@ -160,18 +160,17 @@ const Experience = () => {
             </div>
           )}
           {experienceInitialValues.map((item) =>
-          
-          enableEdit &&  editData == item._id ? (
+
+            enableEdit && editData == item._id ? (
               <>
-                {" "}
                 <form
                   key={`edit_${item._id}`}
-                  className="px-24 flex flex-col gap-5 py-5"
+                  className="border-b  py-5 flex  ss:px-[5%] flex-col gap-5  "
                   onSubmit={handleEditChanges}
                 >
                   <div className="flex flex-col">
                     <label htmlFor="company" className="text-[#555555] ">
-                      Company 
+                      Company
                     </label>
                     <input
                       type="text"
@@ -182,21 +181,21 @@ const Experience = () => {
                       onChange={updateCompany}
                     />
                   </div>
-                  <div className="flex flex-row w-full">
-                    <div className="flex flex-col w-6/12">
-                      <label htmlFor="description" className="text-[#555555] ">
+                  <div className="flex ss:flex-col lg:flex-row   lg:items-end  ss:gap-6  ">
+                    <div className="flex flex-col md:w-full ">
+                      <label label htmlFor="description" className="text-[#555555] ">
                         Description
                       </label>
                       <input
                         type="text"
                         id="description"
-                        className="border-2 w-10/12 h-24 rounded-md"
+                        className="border-2  ss:w-full indent-5 h-24 rounded-md"
                         required
                         value={experience.description}
                         onChange={updateDescription}
                       />
                     </div>
-                    <div className="align-baseline self-end flex flex-row gap-5">
+                    <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3    gap-5 ss:w-full-5">
                       <input
                         type="submit"
                         value="Save"
@@ -221,7 +220,7 @@ const Experience = () => {
             ) : (
               <div
                 key={item._id}
-                className="border-b pl-24 py-5 flex flex-col gap-5"
+                className="border-b p-[5%] py-5  flex flex-col gap-5"
               >
                 <div className="relative">
                   <h1 className="text-medium font-bold">{item.company}</h1>

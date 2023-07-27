@@ -254,7 +254,7 @@ console.log(countryOriginal);
   };
 
   return (
-    <div className="h-full px-20  relative">
+    <div className="h-full sm:px-20 overflow-hidden  ">
       <div className="relative w-full h-40 ">
         <img
           src={
@@ -267,7 +267,7 @@ console.log(countryOriginal);
           <BsPencilFill size={20} color="white" />
         </div>
       </div>
-      <div className="absolute top-28 left-36  flex flex-row  justify-center items-center">
+      <div className="absolute ss:top-[20%] sm:left-[13%] md:left-[10%] ss:left-[10%]  flex flex-row  justify-center items-center">
         <img
           src={userData ? userData.profile.profilePicture : "/assets/codes.png"}
           alt="user image"
@@ -281,7 +281,7 @@ console.log(countryOriginal);
           />
         </div>
       </div>
-      <div className="bg-white  flex justify-center pt-20 px-20 flex-col flex-wrap gap-10 rounded-b-md border-b-2 pb-5">
+      <div className="bg-white  flex justify-center pt-20 px-[5%]     flex-col flex-wrap gap-10 rounded-b-md border-b-2 pb-5">
         {editProfile ? (
           <>
             <div>
@@ -372,10 +372,9 @@ console.log(countryOriginal);
                                 <Combobox.Option
                                   key={country.name}
                                   className={({ active }) =>
-                                    `relative   border-b py-2 px-2  ${
-                                      active
-                                        ? "bg-primary-blue text-[#555] cursor-pointer"
-                                        : ""
+                                    `relative   border-b py-2 px-2  ${active
+                                      ? "bg-primary-blue text-[#555] cursor-pointer"
+                                      : ""
                                     }`
                                   }
                                   value={[
@@ -430,10 +429,9 @@ console.log(countryOriginal);
                               <Combobox.Option
                                 key={`${city.stateCode}-${city.name}`} // Use both stateCode and name for a unique key
                                 className={({ active }) =>
-                                  `relative   border-b py-2 px-2  ${
-                                    active
-                                      ? "bg-primary-blue text-[#555] cursor-pointer"
-                                      : ""
+                                  `relative   border-b py-2 px-2  ${active
+                                    ? "bg-primary-blue text-[#555] cursor-pointer"
+                                    : ""
                                   }`
                                 }
                                 value={[city]}
@@ -458,6 +456,7 @@ console.log(countryOriginal);
                       value={emailValue}
                       onChange={(e) => setEmailNameValue(e.target.value)}
                       className="border-2 rounded-md py-1 w-8/12 px-2 text-[#555]"
+                      readOnly
                     />
                   </div>
                   <div className="flex flex-col gap-2">
@@ -474,7 +473,7 @@ console.log(countryOriginal);
                   </div>
                 </div>
 
-                <div className="flex flex-row justify-between">
+                <div className="flex sm:flex-row ss:flex-col sm:justify-between ss:gap-3">
                   <div className="flex flex-row gap-3 items-center">
                     <input
                       type="radio"
@@ -487,7 +486,7 @@ console.log(countryOriginal);
                     </label>
                   </div>
 
-                  <div className="align-baseline self-end flex flex-row gap-5">
+                  <div className="align-baseline sm:self-end flex sm:flex-row ss:gap-5">
                     <input
                       type="submit"
                       value="Save"
@@ -508,7 +507,7 @@ console.log(countryOriginal);
           <>
             <div>
               <div>
-                <div className="flex flex-row justify-between">
+                <div className="flex sm:flex-row ss:flex-col sm:justify-between ss:gap-3">
                   <div className="flex flex-row gap-2 items-center">
                     <h1 className="text-[#9E6F27] text-xl">{username}</h1>
                     <p>{countryInfo?.flag | "🇨🇦"}</p>
@@ -545,8 +544,8 @@ console.log(countryOriginal);
                 <p>{email}</p>
                 <p>{phoneNumber}</p>
               </div>
-              <div className="flex flex-row justify-between">
-                <div className="flex flex-row gap-6 self-center">
+              <div className="flex md:flex-row ss:flex-col justify-between gap-3  ">
+                <div className="flex md:flex-row ss:flex-col  gap-6 md:self-center  ">
                   <button className="border-2 border-[#9E6F27]  align-middle px-7 text-[#9E6F27] hover:bg-[#EDE4CE]  rounded-2xl h-12">
                     Share
                   </button>
@@ -557,7 +556,7 @@ console.log(countryOriginal);
                     Message
                   </button>
                 </div>
-                <div className="flex flex-col  self-baseline">
+                <div className="flex flex-col  sm:self-baseline ss:gap-4">
                   <button className="bg-[#009ED0] text-white px-5 py-2 rounded-md">
                     Hourly Rate : {hoursRate}USR
                   </button>

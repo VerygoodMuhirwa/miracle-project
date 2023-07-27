@@ -91,9 +91,10 @@ const Patents = () => {
   };
 
   return (
-    <div className="h-full px-20">
+    <div className="h-full  sm:px-20   overflow-x-auto-hidden">
+
       <div className="bg-white">
-        <div className="w-full border-b py-5 px-24 relative ">
+        <div className="w-full border-b py-5  relative  ss:px-[5%]  ">
           <h1 className="text-[#9E6F27] font-extrabold text-xl">
             Patents
           </h1>
@@ -112,7 +113,7 @@ const Patents = () => {
           {addNewData && (
             <div className="border-b py-5">
               <form
-                className="px-24 flex flex-col gap-5"
+                className=" flex flex-col gap-5"
                 onSubmit={handleNewData}
               >
                 <div className="flex flex-col">
@@ -128,8 +129,8 @@ const Patents = () => {
                     onChange={updateTitle}
                   />
                 </div>
-                <div className="flex flex-row w-full">
-                  <div className="flex flex-col w-6/12">
+                <div className="flex ss:flex-col  w-full ss:gap-6  ">
+                  <div className="flex flex-col md:w-6/12   w-full ">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
                     </label>
@@ -142,7 +143,7 @@ const Patents = () => {
                       onChange={updateShoolDescription}
                     />
                   </div>
-                  <div className="align-baseline self-end flex flex-row gap-5">
+                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full">
                     <input
                       type="submit"
                       value="Save"
@@ -160,13 +161,13 @@ const Patents = () => {
             </div>
           )}
           {patentsInitialValues.map((item) =>
-          
-           ableToEdit && editData == item._id ? (
+
+            ableToEdit && editData == item._id ? (
               <>
                 {" "}
                 <form
                   key={item._id}
-                  className="px-24 flex flex-col gap-5 py-5"
+                  className="border-b  py-5 flex  ss:px-[5%] flex-col gap-5"
                   onSubmit={handleEditChanges}
                 >
                   <div className="flex flex-col">
@@ -176,27 +177,27 @@ const Patents = () => {
                     <input
                       type="text"
                       id="title"
-                      className="border-2 w-5/12 rounded-md"
+                      className="border-2 md:w-[50%] sm:w-[80%] ss:w-[90%] indent-5 rounded-md"
                       required
                       value={patent.title}
                       onChange={updateTitle}
                     />
                   </div>
-                  <div className="flex flex-row w-full">
-                    <div className="flex flex-col w-6/12">
+                  <div className="flex ss:flex-col md:flex-row  md:items-end   ss:gap-6  ">
+                    <div className="flex flex-col md:w-full    ">
                       <label htmlFor="description" className="text-[#555555] ">
                         Description
                       </label>
                       <input
                         type="text"
                         id="description"
-                        className="border-2 w-10/12 h-24 rounded-md"
+                        className="border-2 md:w-[100%] sm:w-[80%] ss:w-[90%]  indent-5 h-24 rounded-md"
                         required
                         value={patent.description}
                         onChange={updateShoolDescription}
                       />
                     </div>
-                    <div className="align-baseline self-end flex flex-row gap-5">
+                    <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full-5">
                       <input
                         type="submit"
                         value="Save"
@@ -209,6 +210,7 @@ const Patents = () => {
                         Cancel
                       </button>
                       <button
+                        // type="button"
                         onClick={() => handleDelete(item._id)}
                         className="px-10 bg-[#666666] border-2  text-white  hover:opacity-50 py-1 rounded-xl"
                       >
@@ -221,7 +223,7 @@ const Patents = () => {
             ) : (
               <div
                 key={item._id}
-                className="border-b pl-24 py-5 flex flex-col gap-5"
+                className="border-b  py-5 flex  ss:px-[5%] flex-col gap-5"
               >
                 <div className="relative">
                   <h1 className="text-medium font-bold">{item.title}</h1>
@@ -238,8 +240,7 @@ const Patents = () => {
           )}
         </div>
       </div>
-    </div>
-  );
+    </div>  );
 };
 
 export default Patents;

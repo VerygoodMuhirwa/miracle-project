@@ -90,9 +90,9 @@ const Invetions = () => {
   };
 
   return (
-    <div className="h-full px-20">
+    <div className="h-full sm:px-20 overflow-x-hidden ">
       <div className="bg-white">
-        <div className="w-full border-b py-5 px-24 relative ">
+        <div className="w-full border-b py-5  relative    ss:px-[5%]">
           <h1 className="text-[#9E6F27] font-extrabold text-xl">
             My Inventions
           </h1>
@@ -109,7 +109,7 @@ const Invetions = () => {
         </div>
         <div>
           {addNewData && (
-            <div className="border-b py-5">
+            <div className="w-full border-b py-5  relative  sm:px-24  ss:px-[5%]    ">
               <form
                 className="px-24 flex flex-col gap-5"
                 onSubmit={handleNewData}
@@ -127,21 +127,21 @@ const Invetions = () => {
                     onChange={udpateTitle}
                   />
                 </div>
-                <div className="flex flex-row w-full">
-                  <div className="flex flex-col w-6/12">
+                <div className="flex flex-row w-full ">
+                  <div className="flex-col md:w-6/12  md:block w-full">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
                     </label>
                     <input
                       type="text"
                       id="description"
-                      className="border-2 w-10/12 h-24 rounded-md"
+                      className="border-2 w-10/12  h-24 rounded-md"
                       required
                       value={invetion.description}
                       onChange={updateDesctiption}
                     />
                   </div>
-                  <div className="align-baseline self-end flex flex-row gap-5">
+                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3   gap-5 ss:w-full">
                     <input
                       type="submit"
                       value="Save"
@@ -164,7 +164,7 @@ const Invetions = () => {
                 {" "}
                 <form
                   key={item._id}
-                  className="px-24 flex flex-col gap-5 py-5"
+                  className="border-b  py-5 flex  ss:px-[5%] flex-col gap-5 "
                   onSubmit={handleEditChanges}
                 >
                   <div className="flex flex-col">
@@ -174,27 +174,27 @@ const Invetions = () => {
                     <input
                       type="text"
                       id="title"
-                      className="border-2 w-5/12 rounded-md"
+                      className="border-2 md:w-[50%] sm:w-[80%] ss:w-[90%] indent-5 rounded-md  "
                       required
                       value={invetion.title}
                       onChange={udpateTitle}
                     />
                   </div>
-                  <div className="flex flex-row w-full">
-                    <div className="flex flex-col w-6/12">
+                  <div className="flex ss:flex-col lg:flex-row   lg:items-end  ss:gap-6  ">
+                    <div className=" flex flex-col md:w-full ">
                       <label htmlFor="description" className="text-[#555555] ">
                         Description
                       </label>
                       <input
                         type="text"
                         id="description"
-                        className="border-2 w-10/12 h-24 rounded-md"
+                        className="border-2 md:w-[100%] sm:w-[80%] ss:w-[90%]  indent-5 h-24 rounded-md"
                         required
                         value={invetion.description}
                         onChange={updateDesctiption}
                       />
                     </div>
-                    <div className="align-baseline self-end flex flex-row gap-5">
+                    <div className="flex ss:flex-col md:flex-row  md:items-end  ss:gap-6 md:gap">
                       <input
                         type="submit"
                         value="Save"
@@ -219,7 +219,7 @@ const Invetions = () => {
             ) : (
               <div
                 key={item._id}
-                className="border-b pl-24 py-5 flex flex-col gap-5"
+                className="border-b  py-5 flex  ss:px-[5%] flex-col gap-5"
               >
                 <div className="relative">
                   <h1 className="text-medium font-bold">{item.title}</h1>

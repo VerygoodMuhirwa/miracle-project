@@ -11,7 +11,7 @@ import UserData from "../components/profille/userData";
 function Profile() {
  
   return (
-    <div className=" bg-[#D9D9D9] py-5  flex flex-col gap-6">
+    <div className=" bg-[#D9D9D9] py-5    flex flex-col gap-6 w-[100%">
       <div>
         <UserData />
       </div>
@@ -34,9 +34,9 @@ function Profile() {
         <Experience />
       </div>
       <div>
-        <Certificate/>
+        <Certificate />
       </div>
-     
+
     </div>
   );
 }

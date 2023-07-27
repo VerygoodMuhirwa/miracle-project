@@ -131,8 +131,8 @@ const SignUp = () => {
   return (
     <div>
       <div className="bg-[#D9D9D9]  flex justify-center items-center py-16">
-        <div className="bg-white flex    px-16 py-[4.8em] gap-5   rounded-lg border-2  flex-col">
-          <h1 className="text-2xl  font-medium">Sign up</h1>
+        <div className="bg-white flex    md:px-16  sm:px-16 md:py-[4.8em] sm:py-[4.8em] gap-5 ss:px-[5%] ss:w-[95%] sm:w-[95%] ss:py-[5%] md:w-[60%] ss:px-15 ss:py-30   rounded-lg border-2  flex-col ">
+          <h1 className="text-2xl  font-medium ss:ml-[5%]">Sign up</h1>
           <form
             className="flex flex-col gap-5"
             onSubmit={handleSubmit(handleSubmission)}
@@ -145,9 +145,8 @@ const SignUp = () => {
                 type="email"
                 required
                 id="email"
-                className={`border-2 rounded-lg h-12 focus:outline-none px-5 ${
-                  errors?.email?.message ? "border-red-500" : ""
-                }`}
+                className={`border-2 rounded-lg h-12 focus:outline-none px-5 ${errors?.email?.message ? "border-red-500" : ""
+                  }`}
                 {...register("email")}
                 onChange={handleInputChange}
               />
@@ -159,9 +158,8 @@ const SignUp = () => {
               <input
                 type="text"
                 id="usernmae"
-                className={`border-2 rounded-lg h-12 focus:outline-none px-5 ${
-                  errors?.username?.message ? "border-red-500" : ""
-                }`}
+                className={`border-2 rounded-lg h-12 focus:outline-none px-5 ${errors?.username?.message ? "border-red-500" : ""
+                  }`}
                 {...register("username")}
                 onChange={handleInputChange}
                 required
@@ -174,7 +172,7 @@ const SignUp = () => {
                 </label>
                 {/* Step 3: Use the state variable to conditionally set input type */}
                 <div
-                  className="flex flex-row items-center gap-2"
+                  className="flex flex-row items-center gap-2  ss:mr-[2%]"
                   onClick={handleTogglePassword}
                 >
                   {showPassword ? (
@@ -190,9 +188,8 @@ const SignUp = () => {
               <input
                 type={showPassword ? "text" : "password"} // Use showPassword state to toggle the input type
                 id="password"
-                className={`border-2 rounded-lg h-12 focus:outline-none px-5 ${
-                  errors?.password?.message ? "border-red-500" : ""
-                }`}
+                className={`border-2 rounded-lg h-12 focus:outline-none px-5 ${errors?.password?.message ? "border-red-500" : ""
+                  }`}
                 {...register("password")}
                 onChange={handleInputChange}
                 required
@@ -212,14 +209,13 @@ const SignUp = () => {
               <input
                 type="submit"
                 value="Sign up"
-                className={` text-white w-full rounded-3xl h-12 font-bold  hover:cursor-pointer  ${
-                  isSubmitting ? "bg-[#222222]" : "bg-[#C4C4C4]"
-                }`}
+                className={` text-white w-full rounded-3xl h-12 font-bold  hover:cursor-pointer  ${isSubmitting ? "bg-[#222222]" : "bg-[#C4C4C4]"
+                  }`}
                 disabled={isSubmitting}
               />
             </div>
 
-            <div className="flex flex-row gap-3 justify-center items-center">
+            <div className="gap-3 justify-center items-center  ss:flex ss:flex-col sm:flex sm:flex-row">
               <p>Already have an account? </p>
               <Link to="/login" className="underline font-bold">
                 Log in
@@ -246,7 +242,7 @@ const SignUp = () => {
                   className="object-contain"
                 />
               </div>
-              <div onClick={() => {}} className="hover:cursor-pointer">
+              <div onClick={() => { }} className="hover:cursor-pointer">
                 <img
                   src="/assets/LinkedIn.png"
                   alt=" linkedIn "

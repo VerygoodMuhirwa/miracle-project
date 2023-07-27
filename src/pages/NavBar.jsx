@@ -27,7 +27,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="bg-white flex flex-row justify-between items-center px-24 border border-b-1 py-2">
+      <div className="bg-white flex flex-row  justify-between items-center px-24 border border-b-1 py-2">
         <div>
           <img
             src="/assets/logoDark.png"
@@ -73,11 +73,11 @@ const NavBar = () => {
                   {/* Dropdown items */}
                   <div className="flex flex-col gap-4 w-full">
                     <button>
-                    <Link to="/profile" className="hover:text-[#222] hover:opacity-50" >
-                      Profile
-                    </Link>
+                      <Link to="/profile" className="hover:text-[#222] hover:opacity-50" >
+                        Profile
+                      </Link>
                     </button>
-         
+
                     <hr />
                     <button
                       className="hover:text-[#222] hover:opacity-50"
