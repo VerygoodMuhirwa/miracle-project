@@ -14,7 +14,7 @@ const WorkHistory = () => {
           </h1>
         </div>
         <div className="flex flex-col ">
-          <div className="flex md:flex-row py-5   ss:px-[5%]   md:justify-between  ss:flex-col ss:gap-6  ">
+          <div className="flex md:flex-row py-5   ss:px-[20%]     md:justify-between  ss:flex-col ss:gap-6  ">
             <div className="flex md:flex-col gap-3 items-center    md:p-0 ss:flex-row">
               <div className="flex flex-row gap-1 items-center text-xl  font-bold hover:cursor-pointer">
                 <AiOutlineStar size={32} color="#FFB803" />
@@ -22,7 +22,7 @@ const WorkHistory = () => {
               </div>
               <p className="">Rating</p>
             </div>
-            <div className="flex md:flex-col gap-3  md:p-0 items-center ">
+            <div className="flex md:flex-col gap-3   items-center ">
               <p className="text-xl font-bold ">98</p>
               <p>Students</p>
             </div>

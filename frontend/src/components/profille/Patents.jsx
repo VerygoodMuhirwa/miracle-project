@@ -135,7 +135,7 @@ const Patents = () => {
                     onChange={updateTitle}
                   />
                 </div>
-                <div className="flex ss:flex-col  w-full ss:gap-6 ">
+                <div className="flex ss:flex-col  w-full ss:gap-6  ">
                   <div className="flex flex-col md:w-6/12   w-full ">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
@@ -189,7 +189,7 @@ const Patents = () => {
                       onChange={updateTitle}
                     />
                   </div>
-                  <div className="flex ss:flex-col md:flex-row  md:items-end  ss:gap-6">
+                  <div className="flex ss:flex-col md:flex-row  md:items-end   ss:gap-6  ">
                     <div className="flex flex-col md:w-full    ">
                       <label htmlFor="description" className="text-[#555555] ">
                         Description
@@ -229,7 +229,7 @@ const Patents = () => {
             ) : (
               <div
                 key={item._id}
-                className="border-b pl-24 py-5 flex flex-col gap-5"
+                  className="border-b  py-5 flex  ss:px-[5%] flex-col gap-5"
               >
                 <div className="relative">
                   <h1 className="text-medium font-bold">{item.title}</h1>

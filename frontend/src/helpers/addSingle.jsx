@@ -35,6 +35,8 @@ export const updateProfile = async (objectType, newData) => {
       localStorage.setItem("userData", JSON.stringify(updatedUserData));
     }
     console.log(res.data);
+          window.location.reload();
+
   } catch (error) {
     console.log(error);
   }

@@ -134,7 +134,7 @@ const Invetions = () => {
                     onChange={udpateTitle}
                   />
                 </div>
-                <div className="flex flex-row w-full">
+                <div className="flex flex-row w-full ">
                   <div className="flex-col md:w-6/12  md:block w-full">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
@@ -148,7 +148,7 @@ const Invetions = () => {
                       onChange={updateDesctiption}
                     />
                   </div>
-                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full-5">
+                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3   gap-5 ss:w-full">
                     <input
                       type="submit"
                       value="Save"
@@ -171,7 +171,7 @@ const Invetions = () => {
                 {" "}
                 <form
                   key={item._id}
-                  className="border-b pl-24 py-5 flex flex-col ss:pl-[5%] gap-5"
+                  className="border-b  py-5 flex  ss:px-[5%] flex-col gap-5 "
                   onSubmit={handleEditChanges}
                 >
                   <div className="flex flex-col">
@@ -181,14 +181,14 @@ const Invetions = () => {
                     <input
                       type="text"
                       id="title"
-                      className="border-2  md:w-[50%] sm:w-[80%] ss:w-[90%] indent-5 rounded-md"
+                      className="border-2 md:w-[50%] sm:w-[80%] ss:w-[90%] indent-5 rounded-md  "
                       required
                       value={invetion.title}
                       onChange={udpateTitle}
                     />
                   </div>
-                  <div className="flex ss:flex-col md:flex-row  md:items-end  ss:gap-6">
-                    <div className="flex flex-col md:w-6/12  md:block w-full ">
+                  <div className="flex ss:flex-col lg:flex-row   lg:items-end  ss:gap-6  ">
+                    <div className=" flex flex-col md:w-full ">
                       <label htmlFor="description" className="text-[#555555] ">
                         Description
                       </label>
@@ -201,7 +201,7 @@ const Invetions = () => {
                         onChange={updateDesctiption}
                       />
                     </div>
-                    <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full ">
+                    <div className="flex ss:flex-col md:flex-row  md:items-end  ss:gap-6 md:gap">
                       <input
                         type="submit"
                         value="Save"

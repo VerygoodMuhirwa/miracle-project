@@ -138,27 +138,27 @@ const Certificate = () => {
                   <input
                     type="text"
                     id="title"
-                    className="border-2  rounded-md"
+                    className="border-2 indent-5 w-[50%]  rounded-md"
                     required
                     value={certificate.title}
                     onChange={updateTitle}
                   />
                 </div>
-                <div className="flex flex-row w-full">
-                  <div className="flex flex-col w-6/12 black">
+                <div className="flex ss:flex-col lg:flex-row   lg:items-end ">
+                  <div className="flex flex-col md:w-full ">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
                     </label>
                     <input
                       type="text"
                       id="description"
-                      className="border-2 w-10/12 h-24 rounded-md"
+                      className="border-2  h-24 rounded-md"
                       required
                       value={certificate.description}
                       onChange={updateDescription}
                     />
                   </div>
-                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full-5">
+                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3   gap-5 ss:w-full-5">
                     <input
                       type="submit"
                       value="Save"
@@ -191,14 +191,14 @@ const Certificate = () => {
                     <input
                       type="text"
                       id="title"
-                      className="border-2 w-[70%] indent-5 rounded-md"
+                      className="border-2 w-[50%] indent-5 rounded-md"
                       required
                       value={certificate.title}
                       onChange={updateTitle}
                     />
                   </div>
-                  <div className="flex ss:flex-col md:flex-row  md:items-end  ss:gap-6">
-                    <div className="flex flex-col md:w-6/12  md:block w-full ">
+                  <div className="flex ss:flex-col lg:flex-row   lg:items-end ss:gap-6">
+                    <div className="flexflex flex-col md:w-full  ">
                       <label htmlFor="description" className="text-[#555555] ">
                         Description
                       </label>
@@ -211,7 +211,7 @@ const Certificate = () => {
                         onChange={updateDescription}
                       />
                     </div>
-                    <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full">
+                    <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full-5">
                       <input
                         type="submit"
                         value="Save"
