@@ -4,7 +4,7 @@ export const deleteProfile=async(id)=>{
     const token = JSON.parse(localStorage.getItem("userData")).token;
         
         if(!id) return
-        const res=await axios.delete(`http://localhost:5002/api/v1/profile/deleteProfile/${id}`,{headers: {
+        const res=await axios.delete(`https://miracle.onrender.com/api/v1/profile/deleteProfile/${id}`,{headers: {
             authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },})
