@@ -6,7 +6,7 @@ export const updateProfile = async (objectType, data) => {
     console.log(objectType, data);
     const id=data._id
     const res = await axios.put(
-      `http://localhost:5002/api/v1/profile/updateProfile/${id}`,
+      `https://miracle.onrender.com/api/v1/profile/updateProfile/${id}`,
       { objectType, data },
       {
         headers: {
