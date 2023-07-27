@@ -16,7 +16,7 @@ module.exports.isAuth = (req, res, next) => {
 // console.log(authorization);
     if (authorization) {
         const token1 = authorization.split(" ");
-        const token=token1[1]
+        const token = token1.split(" ")[1];
         
         jwt.verify(token, process.env.SECRET_KEY, (err, decode) => {
             if (err) {
