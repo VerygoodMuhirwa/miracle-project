@@ -51,7 +51,7 @@ export const HandleEditProfile = async ({
     const newCountry = JSON.stringify(country);
 
     const res = await axios.post(
-      "http://localhost:5002/api/v1/profile/editProfile",
+      "https://miracle.onrender.com/api/v1/profile/editProfile",
       {
         about,
         education: NewEducation,
