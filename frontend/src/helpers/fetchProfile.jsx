@@ -4,7 +4,7 @@ export const fetchProfile=async()=>{
 
     try {
         const token= JSON.parse(localStorage.getItem("userData")).token;
-         const res=await axios.get("http://localhost:5002/api/v1/profile/getMyProfile",{
+      const res = await axios.get("https://miracle-project.onrender.com/api/v1/profile/getMyProfile",{
             headers: {
               authorization: `Bearer ${token}`,
               "Content-Type": "application/json",
