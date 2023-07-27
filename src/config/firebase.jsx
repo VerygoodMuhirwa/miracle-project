@@ -58,7 +58,7 @@ const provider3 = new GithubAuthProvider();
 
 export const signInWithGithub = async () => {
   try {
-    const result = await signInWithPopup(auth, provider2);
+    const result = await signInWithPopup(auth, provider3);
     return result;
   } catch (error) {
     if (error.code === "auth/popup-closed-by-user") {
