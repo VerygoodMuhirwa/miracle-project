@@ -1,6 +1,6 @@
 const profileModel = require("../models/profileModel");
+const userModel= require("../models/userModel")
 const Joi = require("joi");
-const mongoose = require("mongoose")
 const validateProfile = (profileData) => {
   const educationSchema = Joi.object({
     school: Joi.string().default(""),
@@ -36,10 +36,12 @@ const validateProfile = (profileData) => {
 
   const profileSchema = Joi.object({
     about: Joi.string(),
+    userName:Joi.string(),
+    title: Joi.string(),
     education: Joi.array().items(educationSchema),
     certification: Joi.array().items(certificationSchema),
     experience: Joi.array().items(experienceSchema),
-    tutorSkills: Joi.string(),
+    tutorialSkills: Joi.string(),
     inventions: Joi.array().items(inventionSchema),
     patents: Joi.array().items(patentSchema),
         availability:Joi.array().items(availabilitySchema),
@@ -60,7 +62,6 @@ module.exports.editProfile = [
       return res.status(404).json({ error: error.details[0].message });
     }
 
-
     const {
       about,
       education,
@@ -69,28 +70,41 @@ module.exports.editProfile = [
       tutorSkills,
       inventions,
       patents,
+      title,
       hourlyRates,  
       country,
       phoneNumber,
         openToCollaborate,
         backgroundPicture,
       profilePicture,
-      availability
+      availability,
+      userName
     } = req.body;
     try {
       const profile = await profileModel.findOneAndUpdate(
         { user: req.user._id },
-        { about, education, certification, experience , profilePicture, backgroundPicture, availability,tutorSkills,inventions, patents, hourlyRates, country, phoneNumber, openToCollaborate},
+        { about, education,title, certification, experience , profilePicture, backgroundPicture, availability,tutorSkills,inventions, patents, hourlyRates, country, phoneNumber, openToCollaborate},
         { new: true }
       );
 
-      if(!profile)return res.status(404).send("No profile found to update")
+      
+    
+    
+  
+      if (!profile) return res.status(404).send("No profile found to update")
+      const nameToUpdate = await userModel.findById(req.user._id)
+      nameToUpdate.name = userName
+      await nameToUpdate.save()
+    
+      if(!nameToUpdate)return res.status(404).send("Faced an error when updating the name ")
+
+    const profileToReturn = await profileModel.findOne({user:req.user._id}).populate("user")
       res.status(201).json({
-        profile: profile,
+        profile: profileToReturn,
         message: "Profile Updated Successfully",
       });
     } catch (err) {
-      let error = err.message;
+      let error = err.message;      
       res.status(400).json({ error: error });
     }
   },

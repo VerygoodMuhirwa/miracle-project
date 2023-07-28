@@ -1,7 +1,7 @@
 import axios from 'axios'
 export const useLogin=async({email,password})=>{
     try {
-      const response = await axios.post("https://miracle-project.onrender.com/api/v1/auth/loginUser", {
+      const response = await axios.post("http://localhost:5002/api/v1/auth/loginUser", {
           email,
           password,
         });

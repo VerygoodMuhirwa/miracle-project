@@ -34,7 +34,7 @@ const UserData = () => {
   }
   const addingAllData = (userData) => {
     const {
-      user: { name: userName, _id, email: userEmail },
+      user: { name: userName  , _id, email: userEmail },
       profile: {
         profilePicture,
         hourlyRates,
@@ -59,6 +59,8 @@ const UserData = () => {
       })
     );
   };
+
+
   useEffect(() => {
     if (userData != null) {
       addingAllData(userData);
@@ -175,7 +177,7 @@ const UserData = () => {
     dispatch(
       userActions.updateUserData2({
         username: Name,
-        title: timeValue,
+        title: titleValue,
         skills: skillsValue,
         hoursRate: hoursRateValue,
         countryInfo: {
@@ -210,7 +212,6 @@ const UserData = () => {
 
     const backgroundPicture = state.userCredentials.backgroundPicture;
     const availability = state.aboutData.selectedTime;
-
     const token = JSON.parse(localStorage.getItem("userData")).token;
 
    
@@ -469,7 +470,7 @@ const UserData = () => {
                     </label>
                   </div>
 
-                  <div className="align-baseline sm:self-end flex sm:flex-row ss:gap-5">
+                  <div className="align-baseline sm:self-end flex sm:flex-row  ss:gap-5">
                     <input
                       type="submit"
                       value="Save"

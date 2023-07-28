@@ -15,6 +15,7 @@ export const HandleEditProfile = async ({
   phoneNumber,
   openToCollaborate,
   backgroundPicture,
+
   availability,
   token,
 }) => {
@@ -49,8 +50,9 @@ export const HandleEditProfile = async ({
     console.log(country);
     const newCountry = JSON.stringify(country);
 
+    console.log(newCountry);
     const res = await axios.post(
-      "https://miracle-project.onrender.com/api/v1/profile/editProfile",
+      "http://localhost:5002/api/v1/profile/editProfile",
       {
         about,
         education: NewEducation,
@@ -72,6 +74,8 @@ export const HandleEditProfile = async ({
         },
       }
     );
+
+
     if (res.data) {
       const userData = JSON.parse(localStorage.getItem("userData"));
       const newProfile = res.data.profile;

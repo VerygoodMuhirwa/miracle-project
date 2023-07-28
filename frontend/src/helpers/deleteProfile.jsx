@@ -8,7 +8,7 @@ export const deleteProfile = async (id) => {
     if (!id) return;
 
     const res = await axios.delete(
-      `https://miracle-project.onrender.com/api/v1/profile/deleteProfile/${id}`,
+      `http://localhost:5002/api/v1/profile/deleteProfile/${id}`,
       {
         headers: {
           authorization: `Bearer ${token}`,

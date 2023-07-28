@@ -32,7 +32,7 @@ const CertificationSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      default: "",
+      default: " ",
     },
     description: {
       type: String,
@@ -46,7 +46,7 @@ const InventionSchema = new mongoose.Schema(
   {
     title: {
       type: String,
-      default: "",
+      default: " ",
     },
     description: {
       type: String,
@@ -85,6 +85,9 @@ const profileSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "user",
       unique: true,
+    },
+    title: {
+      type: String,
     },
     profilePicture: {
       type: String,

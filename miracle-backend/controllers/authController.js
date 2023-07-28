@@ -71,7 +71,12 @@ module.exports.registerUser = [
 
             var profile = await profileModel.create({
               user: user._id,
-              about: "",
+            
+              about: " ",
+            
+              title: " ",
+  
+              
               education: [
                 {
                   school: "",

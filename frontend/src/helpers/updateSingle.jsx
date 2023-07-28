@@ -5,7 +5,7 @@ export const editSingle = async (objectType, newData) => {
     const token = JSON.parse(localStorage.getItem("userData")).token;
 
     const res = await axios.put(
-      `https://miracle-project.onrender.com/api/v1/profile/updateProfile/${_id}`,
+      `http://localhost:5002/api/v1/profile/updateProfile/${_id}`,
      {objectType, newData},
       {
         headers: {

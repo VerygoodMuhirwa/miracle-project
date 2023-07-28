@@ -118,7 +118,7 @@ const Education = () => {
         </div>
         <div>
           {addNewData && (
-            <div className="border-b py-5">
+            <div className="w-full border-b py-5  relative    ss:px-[5%] ">
               <form
                 onSubmit={handleNewData}
               >
@@ -129,27 +129,27 @@ const Education = () => {
                   <input
                     type="text"
                     id="school"
-                    className="border-2 w-5/12 rounded-md"
+                    className="border-2 w-5/12 indent-5 rounded-md"
                     required
                     value={education.school}
                     onChange={updateSchool}
                   />
                 </div>
-                <div className="flex ss:flex-col w-full ss:gap-6">
-                  <div className="">
+                <div className="flex ss:flex-col lg:flex-row   lg:items-end  ss:gap-6">
+                  <div className="flex flex-col md:w-full ">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
                     </label>
                     <input
                       type="text"
                       id="description"
-                      className="border-2 w-10/12 h-24 rounded-md"
+                      className="border-2 w-10/12 h-24 indent-5 rounded-md"
                       required
                       value={education.description}
                       onChange={updateShoolDescription}
                     />
                   </div>
-                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full-5">
+                  <div className="flex ss:flex-col md:flex-row  md:items-end  ss:gap-6 md:gap">
                     <input
                       type="submit"
                       value="Save"

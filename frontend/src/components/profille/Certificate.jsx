@@ -126,9 +126,9 @@ const Certificate = () => {
         </div>
         <div>
           {addNewData && (
-            <div className="border-b py-5">
+            <div className="w-full border-b py-5  relative    ss:px-[5%]">
               <form
-                className="px-24 flex flex-col gap-5"
+                className=" flex flex-col gap-5"
                 onSubmit={handleNewData}
               >
                 <div className="flex flex-col">
@@ -144,15 +144,15 @@ const Certificate = () => {
                     onChange={updateTitle}
                   />
                 </div>
-                <div className="flex ss:flex-col lg:flex-row   lg:items-end ">
-                  <div className="flex flex-col md:w-full ">
+                <div className="flex ss:flex-col lg:flex-row   lg:items-end  ss:gap-6 ">
+                  <div className="flex flex-col md:w-full  ">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
                     </label>
                     <input
                       type="text"
                       id="description"
-                      className="border-2  h-24 rounded-md"
+                      className="border-2 indent-5 h-24 rounded-md"
                       required
                       value={certificate.description}
                       onChange={updateDescription}

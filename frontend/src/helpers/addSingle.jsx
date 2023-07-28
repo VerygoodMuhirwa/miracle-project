@@ -17,7 +17,7 @@ export const updateProfile = async (objectType, newData) => {
     }
 
     const res = await axios.post(
-      `https://miracle-project.onrender.com/api/v1/profile/addSingleProfile/${objectType}`,
+      `http://localhost:5002/api/v1/profile/addSingleProfile/${objectType}`,
        newData1 ,
       {
         headers: {

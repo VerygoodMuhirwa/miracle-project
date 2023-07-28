@@ -116,9 +116,9 @@ const Invetions = () => {
         </div>
         <div>
           {addNewData && (
-            <div className="w-full border-b py-5  relative  sm:px-24  ss:px-[5%]    ">
+            <div className="w-full border-b py-5  relative    ss:px-[5%]    ">
               <form
-                className="px-24 flex flex-col gap-5"
+                className="border-b  py-5 flex   flex-col gap-5"
                 onSubmit={handleNewData}
               >
                 <div className="flex flex-col">
@@ -128,27 +128,27 @@ const Invetions = () => {
                   <input
                     type="text"
                     id="title"
-                    className="border-2 w-5/12 rounded-md"
+                    className="border-2 md:w-[50%] sm:w-[80%] ss:w-[90%] indent-5 rounded-md  "
                     required
                     value={invetion.title}
                     onChange={udpateTitle}
                   />
                 </div>
-                <div className="flex flex-row w-full ">
-                  <div className="flex-col md:w-6/12  md:block w-full">
+                <div className="flex ss:flex-col lg:flex-row   lg:items-end  ss:gap-6  ">
+                  <div className=" flex flex-col md:w-full ">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
                     </label>
                     <input
                       type="text"
                       id="description"
-                      className="border-2 w-10/12  h-24 rounded-md"
+                      className="border-2 w-10/12  indent-5 h-24 rounded-md"
                       required
                       value={invetion.description}
                       onChange={updateDesctiption}
                     />
                   </div>
-                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3   gap-5 ss:w-full">
+                  <div className="flex ss:flex-col md:flex-row  md:items-end  ss:gap-6 md:gap">
                     <input
                       type="submit"
                       value="Save"

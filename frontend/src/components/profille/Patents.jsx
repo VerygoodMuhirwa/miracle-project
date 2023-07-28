@@ -117,9 +117,9 @@ const Patents = () => {
         </div>
         <div>
           {addNewData && (
-            <div className="border-b py-5">
+            <div className="w-full border-b py-5  relative    ss:px-[5%]">
               <form
-                className=" flex flex-col gap-5"
+                className=" border-b  py-5 flex   flex-col gap-5"
                 onSubmit={handleNewData}
               >
                 <div className="flex flex-col">
@@ -129,27 +129,27 @@ const Patents = () => {
                   <input
                     type="text"
                     id="title"
-                    className="border-2 w-5/12 rounded-md"
+                    className="border-2 md:w-[50%] sm:w-[80%] ss:w-[90%] indent-5 rounded-md"
                     required
                     value={patent.title}
                     onChange={updateTitle}
                   />
                 </div>
-                <div className="flex ss:flex-col  w-full ss:gap-6  ">
-                  <div className="flex flex-col md:w-6/12   w-full ">
+                <div className="flex ss:flex-col lg:flex-row   lg:items-end  ss:gap-6  ">
+                  <div className="flex flex-col md:w-full ">
                     <label htmlFor="description" className="text-[#555555] ">
                       Description
                     </label>
                     <input
                       type="text"
                       id="description"
-                      className="border-2 w-10/12 h-24 rounded-md"
+                      className="border-2 w-10/12 indent-5  h-24 rounded-md"
                       required
                       value={patent.description}
                       onChange={updateShoolDescription}
                     />
                   </div>
-                  <div className="align-baseline  flex md:flex-row ss:flex-col ss:gap-3 md:justify-between  gap-5 ss:w-full">
+                  <div className="flex ss:flex-col md:flex-row  md:items-end  ss:gap-6 md:gap">
                     <input
                       type="submit"
                       value="Save"

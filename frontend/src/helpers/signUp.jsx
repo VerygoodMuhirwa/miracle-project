@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const useSignUp = async ({ name, email, password }) => {
     try {
-      const response = await axios.post("https://miracle-project.onrender.com/api/v1/auth/registerUser", {
+      const response = await axios.post("http://localhost:5002/api/v1/auth/registerUser", {
         name,
         email,
         password,
